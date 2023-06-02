@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Caesar cipher</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #video {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      onclick="alertHint()"
+      src="https://res.cloudinary.com/dzqcwammp/image/upload/v1685692881/extras/Rainbow_Black_Pride_Month_Colorful_Gradient_Instagram_Post_1_vglnpt.png"
+      alt="hint"
+      style="height: 70%"
+    />
+
+    <script>
+      function alertHint() {
+        alert(
+          "you might want to seek some help here, but maybe you're closer to the password than you think \n https://www.dcode.fr/rot-cipher"
+        );
+      }
+      function reproducirVideo() {
+        var nombre = prompt("Hint: [A-Z]+9 ROT17 \n Password: ");
+        if (nombre.toLowerCase() === "pride") {
+          var video = document.getElementById("video");
+          video.style.display = "block";
+          video.play();
+          alert("Good Job");
+        } else {
+          alert(
+            "No. Pay attention to the images, the clues (maybe a little hidden on the screen)"
+          );
+        }
+      }
+
+      window.addEventListener("DOMContentLoaded", function () {
+        var video = document.getElementById("video");
+        var windowHeight = window.innerHeight;
+        video.style.height = windowHeight + "px";
+      });
+    </script>
+
+    <h1 class="tittle">PRESS THE BUTTON ↑</h1>
+    <button onclick="reproducirVideo()" class="btn" type="button">
+      <strong>PRESS</strong>
+      <div id="container-stars">
+        <div id="stars"></div>
+      </div>
+
+      <div id="glow">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </button>
+
+    <video id="video" controls>
+      <source
+        class="video"
+        src="https://bit.ly/enterthiswebsite"
+        type="video/mp4"
+      />
+    </video>
+    <p>By Angela 8a</p>
+  </body>
+</html>
